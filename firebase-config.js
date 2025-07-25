@@ -1,17 +1,14 @@
 // 🔒 Block Firebase access on unauthorized domains (e.g. GitHub Pages)
-(function() {
-  const blockedHostnames = ["solarpandora184.github.io"];
-  const isBlocked = blockedHostnames.includes(location.hostname);
+const blockedHostnames = ["solarpandora184.github.io"];
+const isBlocked = blockedHostnames.includes(location.hostname);
 
-  if (isBlocked) {
-    // Disable Firebase functions
-    window.firebase = {
-      initializeApp: () => ({ database: () => null, firestore: () => null }),
-      app: () => ({ database: () => null, firestore: () => null }),
-    };
-    console.warn("⚠️ Firebase access blocked on this domain:", location.hostname);
-  }
-})();
+if (isBlocked) {
+  alert("⚠️ Firebase is blocked on this domain.");
+  throw new Error("Blocked Firebase access on unauthorized domain.");
+}
+
+// Then your existing code:
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "/app";
 import { getAnalytics } from "/analytics";
