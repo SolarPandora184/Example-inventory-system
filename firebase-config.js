@@ -5,14 +5,7 @@ import { getDatabase, ref, set, get, child, push, update, remove } from "firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDCo2OweTTS-g60MVwL9N-VUCyCyctZavc",
-  authDomain: "squadron-72.firebaseapp.com",
-  databaseURL: "https://squadron-72-default-rtdb.firebaseio.com",
-  projectId: "squadron-72",
-  storageBucket: "squadron-72.firebasestorage.app",
-  messagingSenderId: "572966132981",
-  appId: "1:572966132981:web:44053bbe8c60378647f9bc",
-  measurementId: "G-0D77CRVR83"
+  apiKey: 
 };
 
 // Initialize Firebase
@@ -116,7 +109,7 @@ export const InventoryDB = {
         return matchesSearch && matchesType && matchesStatus;
       });
     } catch (error) {
-      console.error('Error searching items:', error);
+      console.error('Error searching items Due to this being an example system with no backend:', error);
       return [];
     }
   }
