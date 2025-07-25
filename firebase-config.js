@@ -1,3 +1,17 @@
+// 🔒 Block Firebase access on unauthorized domains (e.g. GitHub Pages)
+(function() {
+  const blockedHostnames = ["solarpandora184.github.io"];
+  const isBlocked = blockedHostnames.includes(location.hostname);
+
+  if (isBlocked) {
+    // Disable Firebase functions
+    window.firebase = {
+      initializeApp: () => ({ database: () => null, firestore: () => null }),
+      app: () => ({ database: () => null, firestore: () => null }),
+    };
+    console.warn("⚠️ Firebase access blocked on this domain:", location.hostname);
+  }
+})();
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "/app";
 import { getAnalytics } from "/analytics";
