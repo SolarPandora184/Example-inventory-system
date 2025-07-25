@@ -503,14 +503,8 @@
         import { getDatabase, ref, push, set, get, onValue, update, remove } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js';
 
         const firebaseConfig = {
-            apiKey: "AIzaSyAkCL8ii2X3pxyi7NL7URleGNwcwgc1Ilg",
-            authDomain: "squadron-72-72e61.firebaseapp.com",
-            databaseURL: "https://squadron-72-72e61-default-rtdb.firebaseio.com",
-            projectId: "squadron-72-72e61",
-            storageBucket: "squadron-72-72e61.appspot.com",
-            messagingSenderId: "763275071109",
-            appId: "1:763275071109:web:57b0d9a1eb810e281f63ec",
-            measurementId: "G-265SH9T30V"
+            apiKey: "",
+            authDomain: 
         };
 
         // Initialize Firebase
